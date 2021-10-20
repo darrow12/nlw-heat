@@ -4,23 +4,96 @@ O que é cascata?
 É a ordem de aparição dos elementos no estilo.
 */
 
-html, body {
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%); /* HSL: Hue, Saturation and Lightness */
+
   height: 100%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased; /* Funciona apenas em navegadores webkit: chrome, safari, etc */
 }
 
 body {
   display: grid;
   place-items: center;
+}
 
-  background: #121214;
+main {
+  background: url(/images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+  color: var(--gray)
+}
+
+.avatar {
+  width: 10rem; /* 1rem = 16px | 160px/16px = 10rem */
+  margin: 11.5rem auto 0; /* 4: Top, right, bottom, left | 3: top, right and left, bottom | 2: Top and bottom, right and left */
+
+  position: relative;
+  /* Esse é o avatar, o limite para o absolute em baixo. Ao invés da página toda, o limite agora é apenas a imagem de perfil  */
+}
+
+.avatar span {
+  position: absolute; /* Elemento absoluto, ele fica em cima da imagem */
+  top: -15px;
+  z-index: 1;
+  /* Ao mexer no clip-path, fez com que esse elemento fosse sobreposto pelo outro. Z é o eixo de profundidade em terceira dimensão */
+}
+
+.avatar > img { /* Pega a imagem de primeiro nível. Por a outra imagem estar dentro de um elemento, a primeira imagem seria a do avatar */
+  width: 10rem; 
+  height: 11.5rem;
+  object-fit: cover; /* Essa propriedade faz com que a imagem se adapte dentro das alturas e larguras que foram definidas  */
+
+  clip-path: polygon(0 20%, 45% 0, 100% 20%, 100% 80%, 47% 100%, 0 80%);
 }
 
 h1 {
-  color: #E1E1E6;
+  color: #e1e1e6;
   font-size: 1.5rem;
+
+  margin-top: 1.5rem;
 }
 
 a {
-  color: #C4C4CC;
+  color: var(--gray);
   text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0; /* Tinha um preenchimento interno por causa das bolinhas */
+
+  display: flex;
+  /* flex-direction: column;  Muda o direcionamento do flex da horizontal pra vertical */
+  gap: 0.5rem;
+
+  justify-content: center;
 }
