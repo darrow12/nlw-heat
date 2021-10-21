@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -22,35 +21,35 @@
         <img src="https://avatars.githubusercontent.com/u/47289706?v=4" alt="Foto pessoal do usuário">
       </div>
 
-      <h1>Alex Darrow</h1>
-      <a href="https://github.com/darrow12">
+      <h1 id="userName">Alex Darrow</h1>
+      <a href="https://github.com/darrow12" target="_blank">
         <img src="images/github.svg" alt="Ícone GitHub">
         darrow12
       </a>
 
       <p>Um cara aleatório que enche o GitHub de repositórios</p>
 
-      <ul>
+      <ul id="socialLinks">
 
-        <li>
+        <li class="youtube">
           <a href="https://www.youtube.com/channel/UCSQCQkKcGQsj4U8NKjeny2A" target="_blank">
             <img src="images/youtube.svg" alt="YouTube Ícone">
           </a>
         </li>
 
-        <li>
-          <a href="https://www.instagram.com/darrow12" target="_blank">
-            <img src="images/instagram.svg" alt="Instagram Ícone">
-          </a>
-        </li>
-
-        <li>
+        <li class="facebook">
           <a href="https://www.facebook.com/darrou12" target="_blank">
             <img src="images/facebook.svg" alt="Facebook Ícone">
           </a>
         </li>
 
-        <li>
+        <li class="instagram">
+          <a href="https://www.instagram.com/darrow12" target="_blank">
+            <img src="images/instagram.svg" alt="Instagram Ícone">
+          </a>
+        </li>
+
+        <li class="twitter">
           <a href="https://www.twitter.com/darrou12" target="_blank">
             <img src="images/twitter.svg" alt="Twitter Ícone">
           </a>
@@ -59,5 +58,41 @@
       </ul>
     </div>
   </main>
+
+  <script>
+
+    const LinksSocialMedia = {
+      github: "darrow12",
+      youtube: "maykbrito",
+      instagram: "darrow12",
+      facebook: "darrou12",
+      twitter: "darrow12"
+    }
+
+    function changeSocialMediaLinks() {
+      // document.getElementById('userName').textContent = 'Kim';
+      // userName.textContent = 'Kim'
+
+      for (let li of socialLinks.children) {
+        const social = li.getAttribute('class');
+
+        li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+        // alert(li.children[0].href)
+      }
+    }
+
+    changeSocialMediaLinks();
+    // Para chamar a função, tem que colocar ela aqui. Quando ele chega na linha de cima, ele tem que pegar a função que ele criou e guardou e executar
+
+    // camelCase
+    // PascalCase
+    // snake_case
+
+    // DOM = Document Object Model
+    // O navegador cria um documento com mapeamento dos objetos que existem no site, ou seja, tudo que é renderizado, ele mapeia os elementos do HTML.
+    // Através do JS, é possível acessar esse documento e ter acesso a esses elementos HTML, tipo pegar um texto
+    
+    // Para o computador, não interessa a quantidade, e sim a posição, e a posição no computador começa em 0, por isso, enquanto seres humanos contariam 1234, o computador conta 0123
+  </script>
 </body>
 </html>
