@@ -39,11 +39,7 @@ Custom badge created for one of <a href="https://www.rocketseat.com.br">Rocketse
 
 ## Topics
 
-- [Topics](#topics)
 - [About the project](#about-the-project)
-- [Layout](#layout)
-- [Demo](#demo)
-- [License](#license)
 
 * [Layout](#layout)
 
