@@ -1,9 +1,9 @@
 const LinksSocialMedia = {
   github: "darrow12",
-  youtube: "maykbrito",
+  youtube: "channel/UCSQCQkKcGQsj4U8NKjeny2A",
   instagram: "darrow12",
-  facebook: "darrou12",
-  twitter: "darrow12"
+  linkedin: "darrou12",
+  twitter: "darrou12"
 }
 
 function changeSocialMediaLinks() {

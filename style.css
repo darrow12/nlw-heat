@@ -16,6 +16,7 @@ body {
   height: 100%;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased; /* Funciona apenas em navegadores webkit: chrome, safari, etc */
+  background: #121214;
 }
 
 body {
