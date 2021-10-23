@@ -39,15 +39,13 @@ Crachá personalizado criado para um dos maiores eventos da <a href="https://www
 
 ## Tópicos
 
-- [Tópicos](#tópicos)
 - [Sobre o projeto](#sobre-o-projeto)
+
 - [Layout](#layout)
+
 - [Demo](#demo)
+
 - [Licença](#licença)
-
-* [Layout](#layout)
-
-* [Licença](#licença)
 
 
 <br>
